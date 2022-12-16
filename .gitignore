@@ -5,6 +5,7 @@
 
 # assets
 .vscode/
+*.csproj
 
 # User-specific files
 *.rsuser
