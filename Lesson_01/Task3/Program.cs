@@ -5,7 +5,7 @@
 
 using static System.Console;
 
-int n = 1;
+int n;
 string input = "";
 
 Clear();
