@@ -15,7 +15,7 @@ Clear();
 while (true)
 {
     Write("Введите: 'q'-выход, или 'число'-для просмотра цепочки чисел от '-числа' до '+числа': ");
-    input = ReadLine();
+    input = ReadLine()!;
     
     if (!string.IsNullOrEmpty(input) && int.TryParse(input, out n))
     {
