@@ -3,7 +3,7 @@
 
 using static System.Console;
 
-int a, b, max;
+int a, b;
 string input = "";
 
 Clear();
