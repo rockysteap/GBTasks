@@ -13,11 +13,11 @@ while (true)
     WriteLine("Введите: 'q'-выход, или два числа, чтобы определить большее из них.");
 
     Write("Введите первое число 'a': ");
-    input = ReadLine();
+    input = ReadLine()!;
     if (!string.IsNullOrEmpty(input) && int.TryParse(input, out a))
     {
         Write("Введите второе число 'b': ");
-        input = ReadLine();
+        input = ReadLine()!;
         if (!string.IsNullOrEmpty(input) && int.TryParse(input, out b))
         {
             if (a > b) WriteLine($"a = {a}; b = {b} -> max = {a}");
