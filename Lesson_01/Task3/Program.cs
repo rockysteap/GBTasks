@@ -13,7 +13,7 @@ Clear();
 while (true)
 {
     Write("Введите: 'q'-выход, или число, чтобы получить наименование дня недели: ");
-    input = ReadLine();
+    input = ReadLine()!;
     
     if (!string.IsNullOrEmpty(input) && int.TryParse(input, out n))
     {
