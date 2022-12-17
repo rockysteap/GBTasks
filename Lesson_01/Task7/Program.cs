@@ -12,7 +12,7 @@ Clear();
 while (true)
 {
     Write("Введите: 'q'-выход, или 'трехзначное число', чтобы вывести последнюю цифру этого числа: ");
-    input = ReadLine();
+    input = ReadLine()!;
 
     if (!string.IsNullOrEmpty(input) && int.TryParse(input, out n))
     {
