@@ -12,15 +12,15 @@ while (true)
     WriteLine("Введите: 'q'-выход, или три числа, чтобы определить большее из них.");
 
     Write("Введите первое число 'a': ");
-    input = ReadLine();
+    input = ReadLine()!;
     if (!string.IsNullOrEmpty(input) && int.TryParse(input, out a))
     {
         Write("Введите второе число 'b': ");
-        input = ReadLine();
+        input = ReadLine()!;
         if (!string.IsNullOrEmpty(input) && int.TryParse(input, out b))
         {
             Write("Введите третье число 'с': ");
-            input = ReadLine();
+            input = ReadLine()!;
             if (!string.IsNullOrEmpty(input) && int.TryParse(input, out c))
             {
                 if (a > b) 
