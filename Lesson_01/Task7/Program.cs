@@ -4,7 +4,7 @@
 
 using static System.Console;
 
-int n, digits, result;
+int n, digits;
 string input = "";
 
 Clear();
