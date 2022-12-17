@@ -4,25 +4,31 @@
 //        5 ->  Пятница
 
 using static System.Console;
-Clear();
-int n = 1;
 
-while (n != 0)
+int n = 1;
+string input = "";
+
+Clear();
+
+while (true)
 {
-    WriteLine();
-    WriteLine("Введите число, чтобы получить наименование дня недели или введите '0' для выхода:");
-    n = Convert.ToInt32(ReadLine());
+    Write("Введите: 'q'-выход, или число, чтобы получить наименование дня недели: ");
+    input = ReadLine();
     
-    if (1 <= n && n <= 7)
+    if (!string.IsNullOrEmpty(input) && int.TryParse(input, out n))
     {
-        if (n == 1) WriteLine($"День недели №{n} - Понедельник");
-        if (n == 2) WriteLine($"День недели №{n} - Вторник");
-        if (n == 3) WriteLine($"День недели №{n} - Среда");
-        if (n == 4) WriteLine($"День недели №{n} - Четверг");
-        if (n == 5) WriteLine($"День недели №{n} - Пятница");
-        if (n == 6) WriteLine($"День недели №{n} - Суббота");
-        if (n == 7) WriteLine($"День недели №{n} - Воскресенье");
+        if (1 <= n && n <= 7)
+        {
+            if (n == 1) WriteLine($"День недели № {n} - Понедельник");
+            if (n == 2) WriteLine($"День недели № {n} - Вторник");
+            if (n == 3) WriteLine($"День недели № {n} - Среда");
+            if (n == 4) WriteLine($"День недели № {n} - Четверг");
+            if (n == 5) WriteLine($"День недели № {n} - Пятница");
+            if (n == 6) WriteLine($"День недели № {n} - Суббота");
+            if (n == 7) WriteLine($"День недели № {n} - Воскресенье");
+        }
+        else WriteLine("Некорректный ввод, попробуйте ещё раз.");
     }
-    else if (n == 0) break;
+    else if (input == "q") break;
     else WriteLine("Некорректный ввод, попробуйте ещё раз.");
 }
