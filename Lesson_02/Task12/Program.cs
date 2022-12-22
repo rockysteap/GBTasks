@@ -11,8 +11,8 @@ using static System.Console;
 Clear();
 
 WriteLine("Введите первое число: ");
-int a = int.Parse(ReadLine());
+int a = int.Parse(ReadLine()!);
 WriteLine("Введите второе число: ");
-int b = int.Parse(ReadLine());
+int b = int.Parse(ReadLine()!);
 
 WriteLine(a%b==0?"кратно":$"не кратно, остаток {a%b}");
