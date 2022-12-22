@@ -4,9 +4,9 @@ using static System.Console;
 Clear();
 
 WriteLine("Введите первое число 'a': ");
-int a = int.Parse(ReadLine());
+int a = int.Parse(ReadLine()!);
 WriteLine("Введите второе число 'b': ");
-int b = int.Parse(ReadLine());
+int b = int.Parse(ReadLine()!);
 
 // вариант 1
 // if (a==b) WriteLine(" = ");
