@@ -7,9 +7,9 @@ using static System.Console;
 Clear();
 
 WriteLine("Введите первое число: ");
-int a = int.Parse(ReadLine());
+int a = int.Parse(ReadLine()!);
 WriteLine("Введите второе число: ");
-int b = int.Parse(ReadLine());
+int b = int.Parse(ReadLine()!);
 
 WriteLine(a == b*b?$"{a} является квадратом {b}":$"{a} не является квадратом {b}");
 WriteLine(b == a*a?$"{b} является квадратом {a}":$"{b} не является квадратом {a}");
