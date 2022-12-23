@@ -12,45 +12,21 @@ int.TryParse(ReadLine(), out int n);
 int d = (int)Math.Log10(n) + 1;  // d - digits (кол-во цифр в числе)
 int i = 0;
 
-if (d % 2 == 0)
+while (i < d / 2)
 {
-    while (i < d / 2)
+    if ((
+            Convert.ToInt32(n % (Math.Pow(10, (d - i))))
+            /
+            Convert.ToInt32(Math.Pow(10, (d - i - 1)))
+        ) != (
+            Convert.ToInt32(n % (Math.Pow(10, (i + 1))))
+            /
+            Convert.ToInt32(Math.Pow(10, (i)))
+    ))
     {
-        if ((
-                Convert.ToInt32(n % (Math.Pow(10, (d - i))))
-                /
-                Convert.ToInt32(Math.Pow(10, (d - i - 1)))
-            ) != (
-                Convert.ToInt32(n % (Math.Pow(10, (i + 1))))
-                /
-                Convert.ToInt32(Math.Pow(10, (i)))
-        ))
-        {
-            WriteLine($"Число {n} не является палиндромом.");
-            return;
-        }
-        i++;
+        WriteLine($"Число {n} не является палиндромом.");
+        return;
     }
+    i++;
 }
-else if (d % 2 != 0)
-{
-    while (i < d / 2)
-    {
-        if ((
-                Convert.ToInt32(n % (Math.Pow(10, (d - i))))
-                /
-                Convert.ToInt32(Math.Pow(10, (d - i - 1)))
-            ) != (
-                Convert.ToInt32(n % (Math.Pow(10, (i + 1))))
-                /
-                Convert.ToInt32(Math.Pow(10, (i)))
-        ))
-        {
-            WriteLine($"Число {n} не является палиндромом.");
-            return;
-        }
-        i++;
-    }
-}
-
 WriteLine($"Число {n} является палиндромом.");
