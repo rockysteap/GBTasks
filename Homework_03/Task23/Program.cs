@@ -8,14 +8,17 @@ Clear();
 Write("Введите число для вывода таблицы кубов от 1 до числа: ");
 int.TryParse(ReadLine(), out int n);
 
-for (int i = 1; i < n + 1; i++)
+if (n > 0)
 {
-    WriteLine($"Куб числа {i} = {Math.Pow(i, 3)}");
+    for (int i = 1; i < n + 1; i++)
+    {
+        WriteLine($"Куб числа {i} = {Math.Pow(i, 3)}");
+    }
 }
-
-// int i = 1;
-// while (i < n + 1)
-// {
-//     WriteLine($"Куб числа {i} = {Math.Pow(i, 3)}");
-//     i++;
-// }
+else
+{
+    for (int i = 1; i > n-1; i--)
+    {
+        WriteLine($"Куб числа {i} = {Math.Pow(i, 3)}");
+    }
+}
