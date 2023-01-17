@@ -23,7 +23,10 @@ int[] InitAndShowArray(int size, int min, int max)
 {
     int[] result = new int[size];
     int ran_max, ran_min;
-    if (min > max) {ran_max = min; ran_min = max;} else {ran_max = max; ran_min = min;}
+
+    if (min > max) { ran_max = min + 1; ran_min = max; }
+    else { ran_max = max + 1; ran_min = min; }
+
     for (int i = 0; i < result.Length; i++)
     {
         result[i] = new Random().Next(ran_min, ran_max);
@@ -44,7 +47,8 @@ int[] InitAndShowArray(int size, int min, int max)
 // {
 //     int[] result = new int[size];
 //     int ran_max, ran_min;
-//     if (min > max) {ran_max = min; ran_min = max;} else {ran_max = max; ran_min = min;}
+//     if (min > max) {ran_max = min + 1; ran_min = max;} 
+//     else {ran_max = max + 1; ran_min = min;}
 //     Write("[");
 //     for (int i = 0; i < result.Length; i++)
 //     {
