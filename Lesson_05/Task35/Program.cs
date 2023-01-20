@@ -5,10 +5,7 @@
 using static System.Console;
 Clear();
 
-// Write("Введите размер массива, min и max через пробел: ");
-// string[] parameters = ReadLine()!.Split(" ", StringSplitOptions.RemoveEmptyEntries);
-
-int[] array = GetArray(12, 10, 99);
+int[] array = GetArray(123, 10, 99);
 PrintArray(array);
 WriteLine();
 WriteLine(ArrayCount(array));
