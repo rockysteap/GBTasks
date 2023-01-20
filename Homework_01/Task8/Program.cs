@@ -16,18 +16,18 @@ while (true)
 
     if (!string.IsNullOrEmpty(input) && int.TryParse(input, out n))
     {
-        if (n > 1) 
-            for (i=1;i<n+1;i++)
-                {
-                    if (i%2 != 0) continue;
-                    Write($"{i} ");    
-                }
-        else if (n < 1) 
-            for (i=1;i>n-1;i--)
-                {
-                    if (i%2 != 0) continue;
-                    Write($"{i} ");
-                }
+        if (n > 1)
+            for (i = 1; i < n + 1; i++)
+            {
+                if (i % 2 != 0) continue;
+                Write($"{i} ");
+            }
+        else if (n < 1)
+            for (i = 1; i > n - 1; i--)
+            {
+                if (i % 2 != 0) continue;
+                Write($"{i} ");
+            }
         WriteLine();
     }
     else if (input == "q") break;
