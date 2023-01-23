@@ -55,6 +55,7 @@ void ProgressBarAnimation(int inLength, int inSpeed) {
 void ComputingAnimation(int inTimer, int inSpeed) {
     // inTimer - количество итераций цикла while
     // inSpeed - время отображения каждого символа (примерно 50ms)
+    Console.CursorVisible = false;
     string symbols = "\\|/-";
     while (inTimer > 0) {
         for (int i = 0; i < symbols.Length; i++) {
@@ -62,6 +63,7 @@ void ComputingAnimation(int inTimer, int inSpeed) {
             Thread.Sleep(TimeSpan.FromMilliseconds(inSpeed));
             Write("\b"); } 
     inTimer--; }
+    Console.CursorVisible = true;
 }
 
 
