@@ -46,7 +46,6 @@ int[,] ShrinkMatrixByAdress(int[,] inMatrix, int inMinValue)
             }
         }
     }
-    // WriteLine($"Адрес минимального: {row}, {column}");
     int[,] resultMatrix = new int[inMatrix.GetLength(0) - 1, inMatrix.GetLength(1) - 1];
     for (int i = 0; i < inMatrix.GetLength(0); i++)
     {
@@ -56,9 +55,6 @@ int[,] ShrinkMatrixByAdress(int[,] inMatrix, int inMinValue)
             if (i < row && j > column) {resultMatrix[i, j - 1] = inMatrix[i, j];}
             if (i > row && j > column) {resultMatrix[i - 1, j - 1] = inMatrix[i, j];}
             if (i > row && j < column) {resultMatrix[i - 1, j] = inMatrix[i, j];}
-            // resultMatrix[i, j] = (i < row && j < column) ? inMatrix[i, j] 
-            //     : (i < row && j > column) ? inMatrix[i, j];
-                                  
         }    
     }
     return resultMatrix;
@@ -105,6 +101,7 @@ int[,] CreateRandomMatrix(){
     }
     return resultArray;
 }
+
 
 void PrintMatrix(int[,] inMatrix){
     for (int i = 0; i < inMatrix.GetLength(0); i++){
