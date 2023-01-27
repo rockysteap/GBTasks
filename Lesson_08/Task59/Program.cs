@@ -27,14 +27,14 @@ while (true)
                 + $"\n{new string('-', 27)}Завершение программы{new string('-', 27)}\n");
         break;
     }
-    matrix = ShrinkMatrixByAdress(matrix, minValue);
+    matrix = ShrinkMatrixByAddress(matrix, minValue);
     shrinkCount++;
     WriteLine($"\nИзмененная матрица(сокращений -> {shrinkCount}):");
     PrintMatrix(matrix);
 }
 
 
-int[,] ShrinkMatrixByAdress(int[,] inMatrix, int inMinValue)
+int[,] ShrinkMatrixByAddress(int[,] inMatrix, int inMinValue)
 {
     if (inMatrix.GetLength(0) < 1 || inMatrix.GetLength(1) < 1) return inMatrix;
     int row = 0; int column = 0;
